@@ -10,7 +10,11 @@ import './App.css'
 export const App = () => {
   return (
     <div>
+      <header>ヘッダーですよ</header>
+    <div>
       <h2>Hello, world!</h2>
     </div>
+    </div>
+    
   )
 }
