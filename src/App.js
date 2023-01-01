@@ -16,6 +16,7 @@ export const App = () => {
         <h2>Dogアプリ</h2>
         <p>犬の画像を表示するサイトです</p>
         <img src= {dogUrl} alt="犬の写真は外部サイトDogAPIを利用"></img>
+        <button onClick={() => setDogUrl("https://images.dog.ceo/breeds/whippet/n02091134_12759.jpg")}>更新</button>
       </div>
     </div>
     
