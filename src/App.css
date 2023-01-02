@@ -1,0 +1,13 @@
+header {
+	background-color:#f5f5f5;
+}
+.wrapper {
+	margin: 0 10%;
+}
+.dog-image {
+	float:right;
+}
+
+img {
+	width: 300px;
+}

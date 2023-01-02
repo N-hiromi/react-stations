@@ -21,11 +21,15 @@ export const App = () => {
   return (
     <div>
       <header>ヘッダーですよ</header>
-      <div>
+      <div className="wrapper">
         <h2>Dogアプリ</h2>
-        <p>犬の画像を表示するサイトです</p>
-        <img src= {dogUrl} alt="犬の写真は外部サイトDogAPIを利用"></img>
-        <button onClick={ () => click() }>更新</button>
+        <div>
+          <p>犬の画像を表示するサイトです</p>
+          <div className="dog-image">
+            <img src= {dogUrl} alt="犬の写真は外部サイトDogAPIを利用"></img>
+            <button onClick={ () => click() }>更新</button>
+          </div>
+        </div>
       </div>
     </div>
     
