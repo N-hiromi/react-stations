@@ -1,11 +1,10 @@
 import * as React from 'react'
-import {DogImage} from '~/DogImage'
+import { DogImage } from '~/DogImage'
 
-export const Description = (props) => {
+export const Description = () => {
 	const [dogUrl, setDogUrl] = React.useState("https://images.dog.ceo/breeds/terrier-norwich/n02094258_2380.jpg");
 
   const click = async() => {
-    //fetchでレスポンスを格納
     const res = await fetch("https://dog.ceo/api/breeds/image/random");
     const json = await res.json();
     const url = await json.message;
