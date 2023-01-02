@@ -8,7 +8,16 @@ import './App.css'
  * @type {React.FC}
  */
 export const App = () => {
-  const [dogUrl, setDogUrl] = React.useState("https://images.dog.ceo/breeds/terrier-norwich/n02094258_2380.jpg")
+  const [dogUrl, setDogUrl] = React.useState("https://images.dog.ceo/breeds/terrier-norwich/n02094258_2380.jpg");
+
+  const click = async() => {
+    //fetchでレスポンスを格納
+    const res = await fetch("https://dog.ceo/api/breeds/image/random");
+    const json = await res.json();
+    const url = await json.message;
+    setDogUrl(url);
+  }
+
   return (
     <div>
       <header>ヘッダーですよ</header>
@@ -16,7 +25,7 @@ export const App = () => {
         <h2>Dogアプリ</h2>
         <p>犬の画像を表示するサイトです</p>
         <img src= {dogUrl} alt="犬の写真は外部サイトDogAPIを利用"></img>
-        <button onClick={() => setDogUrl("https://images.dog.ceo/breeds/whippet/n02091134_12759.jpg")}>更新</button>
+        <button onClick={ () => click() }>更新</button>
       </div>
     </div>
     
