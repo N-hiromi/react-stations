@@ -2,8 +2,8 @@
 
 import * as React from 'react'
 import './App.css'
-import {Header} from '~/components/Header'
-import {Description} from '~/components/Description'
+import {Header} from '~/Header'
+import {Description} from '~/Description'
 
 /**
  * 
