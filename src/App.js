@@ -2,8 +2,8 @@
 
 import * as React from 'react'
 import './App.css'
-import {Header} from './src/Header'
-import {Description} from './src/Description'
+import {Header} from 'src/Header'
+import {Description} from 'src/Description'
 import App from '../src/App'
 
 /**
@@ -13,7 +13,7 @@ import App from '../src/App'
 export const App = () => {
   return (
     <div>
-      <Header title={'ヘッダーですよ'}></Header>
+      <Header title={'ヘッダーですよ'} />
       <Description />
     </div>
   )
