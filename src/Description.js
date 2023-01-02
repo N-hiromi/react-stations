@@ -1,5 +1,5 @@
 import * as React from 'react'
-import {DogImage} from './src/DogImage'
+import {DogImage} from '~/DogImage'
 
 export const Description = (props) => {
 	const [dogUrl, setDogUrl] = React.useState("https://images.dog.ceo/breeds/terrier-norwich/n02094258_2380.jpg");
