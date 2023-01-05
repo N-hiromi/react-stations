@@ -14,7 +14,7 @@ export const DogListContainer = () => {
 			setBreeds(list);
 		})()
 	}, [])
-	
+	console.log(selectedBreed);
 	// React.useEffect( () => {
 	// 	const select = document.querySelector('select');
 	// 	console.log("selectはなに？");

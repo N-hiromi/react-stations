@@ -9,11 +9,6 @@ export const BreedsSelect = (props) => {
 	}
 
 	const changeBreedsState = (e) => {
-		console.log(e);
-		const select = document.querySelector('select');
-		console.log("selectはなに？");
-		console.log(select);
-		console.log(e.currentTarget.value);
 		props.setSelectedBreed(e.currentTarget.value);
 	}
 	
