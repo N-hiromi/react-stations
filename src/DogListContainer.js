@@ -5,9 +5,9 @@ import { BreedsSelect } from './BreedsSelect';
 
 export const DogListContainer = () => {
 	//dog名リスト保持
-	const [breeds, setBreeds] = React.useState("affenpinscher");
+	const [breeds, setBreeds] = React.useState([]);
 	//dog名リストを表示したセレクトボックスのうち、選択されたドッグ名を保持
-	const [selectedBreed, setSelectedBreed] = React.useState(breeds);
+	const [selectedBreed, setSelectedBreed] = React.useState("affenpinscher");
 	//dog画像リスト保持
 	// const [dogImageList, setDogImageList] = React.useState([]);
 	React.useEffect( () => {
@@ -34,7 +34,7 @@ export const DogListContainer = () => {
 
 	return (
 		<div>
-			<BreedsSelect breeds={ breeds } setSelectedBreed={ setSelectedBreed }/>
+			<BreedsSelect breeds={ breeds } setSelectedBreed={ setSelectedBreed } selectedBreed={ selectedBreed }/>
 			{/* <button onClick={ getImageList }>表示</button> */}
 			{/* <ul>
 				{ dogList }

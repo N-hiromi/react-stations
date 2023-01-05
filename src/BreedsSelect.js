@@ -9,14 +9,15 @@ export const BreedsSelect = (props) => {
 		items.push(<option key={ i } value={ props.breeds[i] }>{ props.breeds[i] }</option>)
 	}
 	//selectが変更したら発火
-	const changeBreedsState = (e) => {
+	const onChange = (e) => {
+		console.log("change");
 		console.log(document.getElementById("breedsList").value);
-		document.getElementById("breedsList").value = e.target.value;
+		console.log(e.target.value);
+		// document.getElementById("breedsList").value = e.target.value;
 		props.setSelectedBreed(e.target.value);
 	}
-	console.log(props.breeds[0]);
-	// console.log(document.getElementById("breedsList").value);
+
 	return (
-		<select defaultValue={props.breeds[0]} id="breedsList" onChange={ changeBreedsState } >{ items }</select>
+		<select defaultValue="affenpinscher" id="breedsList" onChange={ onChange } >{ items }</select>
 	)
 }
