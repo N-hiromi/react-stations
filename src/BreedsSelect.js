@@ -14,6 +14,6 @@ export const BreedsSelect = (props) => {
 	}
 
 	return (
-		<select value={"affenpinscher"} id="breedsList" onChange={ onChange } >{ items }</select>
+		<select value={props.selectedBreed} id="breedsList" onChange={ onChange } >{ items }</select>
 	)
 }
