@@ -14,9 +14,9 @@ export const BreedsSelect = (props) => {
 		document.getElementById("breedsList").value = e.target.value;
 		props.setSelectedBreed(e.target.value);
 	}
-
+	console.log(props.breeds[0]);
 	// console.log(document.getElementById("breedsList").value);
 	return (
-		<select id="breedsList" onChange={ changeBreedsState } >{ items }</select>
+		<select defaultValue={props.breeds[0]} id="breedsList" onChange={ changeBreedsState } >{ items }</select>
 	)
 }
