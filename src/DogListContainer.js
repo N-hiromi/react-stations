@@ -22,12 +22,6 @@ export const DogListContainer = () => {
 		const res = await fetch("https://dog.ceo/api/breed/" + selectedBreed + "/images/random/12");
 		const json = await res.json();
 		const imageList = json.message;
-		//取得件数を12件に制限。13件目から削除して格納する
-		// const regImageList = imageList.filter((img, index) => {
-		// 	return index < 12;
-		// }) 
-		// setDogImageList(regImageList);
-		console.log(imageList);
 		setDogImageList(imageList);
 	}
 	const dogList = dogImageList.map((src, index) => {
