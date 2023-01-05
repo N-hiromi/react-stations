@@ -10,13 +10,10 @@ export const BreedsSelect = (props) => {
 	}
 	//selectが変更したら発火
 	const onChange = (e) => {
-		console.log("change");
-		console.log(document.getElementById("breedsList").value);
-		console.log(e.target.value);
 		props.setSelectedBreed(e.target.value);
 	}
 
 	return (
-		<select id="breedsList" onChange={ onChange } >{ items }</select>
+		<select value={"affenpinscher"} id="breedsList" onChange={ onChange } >{ items }</select>
 	)
 }
