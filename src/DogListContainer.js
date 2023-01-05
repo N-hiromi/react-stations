@@ -5,7 +5,7 @@ import { BreedsSelect } from './BreedsSelect';
 
 export const DogListContainer = () => {
 	const [breeds, setBreeds] = React.useState("affenpinscher");
-	const [selectedBreed, setSelectedBreed] = React.useState("affenpinscher");
+	const [selectedBreed, setSelectedBreed] = React.useState(breeds);
 	React.useEffect( () => {
 		(async() => {
 			const res = await fetch("https://dog.ceo/api/breeds/list/all");
