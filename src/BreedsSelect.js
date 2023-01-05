@@ -10,6 +10,8 @@ export const BreedsSelect = (props) => {
 	}
 
 	const changeBreedsState = (e) => {
+		console.log(document.getElementById("breedsList").value);
+		document.getElementById("breedsList").value = e.target.value;
 		props.setSelectedBreed(e.target.value);
 	}
 	

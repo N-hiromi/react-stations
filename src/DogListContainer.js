@@ -22,16 +22,16 @@ export const DogListContainer = () => {
 	// 	const res = await fetch("https://dog.ceo/api/breed/" + selectedBreed + "/images");
 	// 	const json = await res.json();
 	// 	const imageList = json.message;
-	// 	//取得件数を100件に制限。101件目から削除して格納する
+	// 	//取得件数を12件に制限。101件目から削除して格納する
 	// 	const regImageList = imageList.filter((img, index) => {
-	// 		return index < 100;
+	// 		return index < 12;
 	// 	}) 
 	// 	setDogImageList(regImageList);
 	// }
 	// const dogList = dogImageList.map((src, index) => {
 	// 	return <li key={ index }><img src={ src } alt={ index } /></li>
 	// })
-	console.log(selectedBreed);
+
 	return (
 		<div>
 			<BreedsSelect breeds={ breeds } setSelectedBreed={ setSelectedBreed }/>
