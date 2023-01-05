@@ -34,7 +34,7 @@ export const DogListContainer = () => {
 
 	return (
 		<div>
-			<BreedsSelect breeds={ breeds } setSelectedBreed={ setSelectedBreed } selectedBreed={ selectedBreed }/>
+			<BreedsSelect breeds={ breeds } setSelectedBreed={ setSelectedBreed } />
 			{/* <button onClick={ getImageList }>表示</button> */}
 			{/* <ul>
 				{ dogList }

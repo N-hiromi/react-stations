@@ -13,11 +13,10 @@ export const BreedsSelect = (props) => {
 		console.log("change");
 		console.log(document.getElementById("breedsList").value);
 		console.log(e.target.value);
-		// document.getElementById("breedsList").value = e.target.value;
 		props.setSelectedBreed(e.target.value);
 	}
 
 	return (
-		<select defaultValue="affenpinscher" id="breedsList" onChange={ onChange } >{ items }</select>
+		<select id="breedsList" onChange={ onChange } >{ items }</select>
 	)
 }
