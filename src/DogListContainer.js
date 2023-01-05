@@ -1,31 +1,39 @@
 // DO NOT DELETE
 
 import * as React from 'react'
+import { BreedsSelect } from './BreedsSelect';
 
-export const DogListContainer = (props) => {
-	const [breeds, setBreeds] = React.useState();
-	React.useEffect(() => {
-		const getDogList = async () => {
+export const DogListContainer = () => {
+	const [breeds, setBreeds] = React.useState("");
+	const [selectedBreed, setSelectedBreed] = React.useState(breeds);
+	React.useEffect( () => {
+		(async() => {
 			const res = await fetch("https://dog.ceo/api/breeds/list/all");
 			const json = await res.json();
 			const list = await Object.keys(json.message);
-			console.log(list);
 			setBreeds(list);
-			
-			//listを繰り返して表示
-			// const roop = () => {
-			// 	const items = [];
-			// 	for (let i = 0; i < list[i]; i++){
-			// 		items.push(<li>{ list[i] }</li>)
-			// 	}
-			// 	return <ul>{ items }</ul>
-			// }
-		}
-		getDogList();
-		
-
+		})()
 	}, [])
+	
+	// React.useEffect( () => {
+	// 	const select = document.querySelector('select');
+	// 	console.log("selectはなに？");
+	// 	console.log(select);
+	// 	const changeBreedsState = (e) => {
+	// 		console.log(e);
+	// 		// console.log(e.currentTarget.value);
+	// 		// setSelectedBreed(e.currentTarget.value);
+	// 	}
+	// 	select.addEventListener('change', changeBreedsState());
+	// }, [selectedBreed])
+	
+	
+
 	return (
-			<p>{ breeds }</p>
+		<div>
+			<BreedsSelect breeds={ breeds } setSelectedBreed={ setSelectedBreed }/>
+			{ selectedBreed }
+		</div>
+		
 	)
 }
