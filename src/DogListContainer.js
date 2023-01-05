@@ -31,6 +31,7 @@ export const DogListContainer = () => {
 	// const dogList = dogImageList.map((src, index) => {
 	// 	return <li key={ index }><img src={ src } alt={ index } /></li>
 	// })
+	console.log(selectedBreed);
 	return (
 		<div>
 			<BreedsSelect breeds={ breeds } setSelectedBreed={ setSelectedBreed }/>
