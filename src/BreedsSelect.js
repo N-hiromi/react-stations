@@ -14,12 +14,7 @@ export const BreedsSelect = (props) => {
 		document.getElementById("breedsList").value = e.target.value;
 		props.setSelectedBreed(e.target.value);
 	}
-	//selectの初期値
-	React.useEffect(() => {
-		console.log(document.getElementById("breedsList"));
-		console.log(props.breeds);
-		document.getElementById("breedsList").value = props.breeds[0];
-	}, [])
+
 	// console.log(document.getElementById("breedsList").value);
 	return (
 		<select id="breedsList" onChange={ changeBreedsState } >{ items }</select>
